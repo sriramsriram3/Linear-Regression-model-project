@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FWI Prediction</title>
+    </head>
+    <body>
+        <div class="login">
+            <h1>FWI Prediction</h1>
+            <form action="{{ url_for('predict_datapoints') }}" method="post">
+                <label for="Temperature">Temperature:</label>
+                <input type="text" id="Temperature" name="Temperature" placeholder="Temperature" required="required"><br>
+
+                <label for="RH">RH:</label>
+                <input type="text" id="RH" name="RH" placeholder="Relative Humidity" required="required"><br>
+
+                <label for="Ws">Ws:</label>
+                <input type="text" id="Ws" name="Ws" placeholder="Wind Speed" required="required"><br>
+
+                <label for="Rain">Rain:</label>
+                <input type="text" id="Rain" name="Rain" placeholder="Rainfall" required="required"><br>
+
+                <label for="FFMC">FFMC:</label>
+                <input type="text" id="FFMC" name="FFMC" placeholder="Fine Fuel Moisture Code" required="required"><br>
+
+                <label for="DMC">DMC:</label>
+                <input type="text" id="DMC" name="DMC" placeholder="Drought Code" required="required"><br>
+
+                <label for="ISI">ISI:</label>
+                <input type="text" id="ISI" name="ISI" placeholder="Initial Spread Index" required="required"><br>
+
+                <label for="Classes">Classes:</label>
+                <input type="text" id="Classes" name="Classes" placeholder="Fire Danger Classes" required="required"><br>
+
+                <label for="Region">Region:</label>
+                <input type="text" id="Region" name="Region" placeholder="Region" required="required"><br>
+
+                <input type="submit" Class="btn btn-primary btn-block btn-large">predict</button>
+            </form>
+
+        <h2> 
+            The FWI prediction is {{results}}
+        </h2>
+        </div>
+    </body>
+</html>
